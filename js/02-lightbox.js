@@ -19,9 +19,6 @@ const lightboxOptions = {
   captionDelay: 250, // Delay showing the caption until 250ms after image is displayed
   captionPosition: 'bottom', // Set the caption position to bottom
   captionsData: 'alt',
-  nav: true, // Show navigation buttons
-  navText: ['<', '>'], // Set custom navigation text
-  navClass: ['prev', 'next'] // Set custom navigation class names
 };
 
 
