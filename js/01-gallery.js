@@ -21,9 +21,15 @@ listGallery.addEventListener('click', onHandleClickImage)
 
 function onHandleClickImage(event) {
   event.preventDefault(); 
+  if (event.target.nodeName !== "IMG") return
   const imgSrc = event.target.dataset.source;
   const instance = basicLightbox.create(`
     <img src="${imgSrc}" width="800" height="600">
   `);
   instance.show();
+  document.addEventListener("keydown", (e) => {
+    if (e.code == "Escape" && basicLightbox.visible()) instance.close()
+    }
+  )
 }
+
